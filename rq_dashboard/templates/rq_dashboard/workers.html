@@ -14,7 +14,7 @@
         <table id="workers" class="table table-bordered">
             <thead class="thead-light">
                 <tr>
-                    <th>Worker</th>
+                    <th>Worker Ip / Pid</th>
                     <th>Current&nbsp;job</th>
                     <th>Queues</th>
                 </tr>
@@ -26,11 +26,10 @@
             </tbody>
         </table>
     </div>
-
     <script name="worker-row" type="text/template">
         <tr data-role="worker">
             <td <% if (d.version && d.python_version) { %>title ="RQ <%= d.version %> / Python <%= d.python_version %>" <% } %>>
-                <%= d.name %>
+                <%= d.ip_address %> <%= d.pid %> 
             </td>
             
             <% if (d.current_job !== 'idle') { %>
