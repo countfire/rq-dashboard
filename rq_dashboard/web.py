@@ -536,8 +536,9 @@ def list_workers(instance_number):
         (
             dict(
                 name=worker.name,
-                 pid = worker.pid,
-                 ip_address = worker.ip_address,
+                pid = worker.pid,
+                hostname = worker.hostname,
+                ip_address = worker.ip_address,
                 queues=serialize_queue_names(worker),
                 state=str(worker.get_state()),
                 current_job=serialize_current_job(worker.get_current_job()),

@@ -29,7 +29,7 @@
     <script name="worker-row" type="text/template">
         <tr data-role="worker">
             <td <% if (d.version && d.python_version) { %>title ="RQ <%= d.version %> / Python <%= d.python_version %>" <% } %>>
-                <%= d.ip_address %> <%= d.pid %> 
+                <%= d.hostname %> <%= d.pid %> 
             </td>
             
             <% if (d.current_job !== 'idle') { %>
